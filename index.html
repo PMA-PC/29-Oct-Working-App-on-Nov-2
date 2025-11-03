@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Positive Mental Action! - Wellness & Communication Tracker</title>
+  <!-- Google Fonts - Inter for Typography System -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN for simplicity in this environment. In a real project, this would be built. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          },
+          colors: {
+            'primary-brand': '#0d9488',
+            'primary-dark-brand': '#0f766e',
+            'accent-coral': '#fb7185',
+            'success-sage': '#a3e635',
+            'bg-dark': '#1f2937',
+            'bg-card': '#374151',
+            'text-primary': '#f9fafb',
+            'text-secondary': '#d1d5db',
+            'border-light': 'rgba(255,255,255,0.1)',
+            teal: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a'
+            },
+            coral: {
+              50: '#fff1f2',
+              100: '#ffe4e6',
+              200: '#fecdd3',
+              300: '#fda4af',
+              400: '#fb7185',
+              500: '#f43f5e',
+              600: '#e11d48'
+            },
+            sage: {
+              50: '#f7fee7',
+              100: '#ecfccb',
+              200: '#d9f99d',
+              300: '#bef264',
+              400: '#a3e635',
+              500: '#84cc16'
+            },
+            charcoal: {
+              900: '#1f2937',
+              800: '#374151',
+              700: '#4b5563',
+              600: '#6b7280'
+            },
+            gray: {
+              50: '#f9fafb',
+              100: '#f3f4f6',
+              200: '#e5e7eb',
+              300: '#d1d5db',
+              400: '#9ca3af',
+              500: '#6b7280',
+              600: '#4b5563',
+              700: '#374151',
+              800: '#1f2937',
+              900: '#111827'
+            },
+            red: {
+              300: '#fca5a5',
+              400: '#f87171',
+              500: '#ef4444',
+              600: '#dc2626'
+            },
+            yellow: {
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b'
+            },
+            purple: {
+              300: '#d8b4fe',
+              400: '#c084fc',
+              500: '#a855f7'
+            },
+            blue: {
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6'
+            },
+            lime: {
+              400: '#a3e635'
+            },
+            green: {
+              500: '#22c55e',
+              600: '#059669'
+            },
+            'warning': '#f59e0b',
+            'error': '#ef4444',
+            'info': '#3b82f6',
+            'crisis-red': '#dc2626',
+            'mood-1': '#ef4444',
+            'mood-2': '#f97316',
+            'mood-3': '#eab308',
+            'mood-4': '#84cc16',
+            'mood-5': '#22c55e',
+            'pe-indigo-600': '#4f46e5',
+            'pe-purple-600': '#9333ea',
+            'pe-pink-500': '#ec4899',
+            'pe-teal-500': '#14b8a6',
+            'pe-teal-600': '#0d9488',
+            'pe-blue-500': '#3b82f6',
+            'pe-indigo-500': '#6366f1',
+            'pe-gray-700': '#374151',
+            'pe-gray-800': '#1f2937',
+            'pe-orange-500': '#f97316',
+            'pe-red-500': '#ef4444',
+            'pe-green-500': '#22c55e',
+            'pe-emerald-600': '#059669',
+            'pe-red-600': '#dc2626',
+            'pe-pink-600': '#db2777',
+            'pe-yellow-500': '#eab308',
+            'pe-amber-500': '#f59e0b',
+            'pe-yellow-400': '#facc15'
+          },
+          animation: {
+            fadeIn: 'fadeIn 0.5s ease-out forwards',
+            shimmer: 'shimmer 1.5s infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(10px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-1000px 0' },
+              '100%': { backgroundPosition: '1000px 0' }
+            }
+          },
+          boxShadow: {
+            'card-light': '0 1px 3px rgba(0,0,0,0.1)',
+            'card-hover': '0 4px 12px rgba(13,148,136,0.15)',
+            'card-featured': '0 8px 24px rgba(13,148,136,0.3)',
+            'nav-bar': '0 -4px 12px rgba(0,0,0,0.2)',
+            'modal': '0 10px 25px rgba(0,0,0,0.6)'
+          }
+        }
+      }
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "immutable": "https://aistudiocdn.com/immutable@^5.1.4",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.292.0"
+  }
+}
+</script>
+</head>
+<body class="bg-bg-dark min-h-screen text-text-primary pb-20 font-sans">
+  <div id="root"></div>
+  <script type="module" src="index.tsx"></script>
+</body>
+</html>
